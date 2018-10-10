@@ -1,10 +1,11 @@
 import React,{Component} from 'react';
+import './index.less'
 
 class Home extends Component {
     render() {
         return (
-            <div>
-                <h1>首页</h1>
+            <div className='home'>
+                好好学习，将来能赚大钱！
             </div>
         )
     }

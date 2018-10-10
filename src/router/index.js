@@ -1,18 +1,26 @@
 import React,{Component} from 'react';
 import {HashRouter, Route, Switch} from 'react-router-dom';
-import Home from '../views/Home'
-import NotMatch from '../views/NotMatch'
+import Home from '../views/Home';
+import NotMatch from '../views/NotMatch';
+import Admin from '../views/Admin';
+import SecondPage from '../views/SecondPage';
 
 class Router extends Component {
-    constructor(props) {
-        super(props)
-    }
+    
     render() {
         return (
             <HashRouter>
                 <div>
                     <Switch>
-                        <Route path='/' exact component={Home}></Route>
+                        <Route path='/admin' render={()=>
+                            <Admin>
+                                <Switch>
+                                    <Route path='/admin/home' component={Home}></Route>
+                                    <Route path='/admin/secondPage' component={SecondPage}></Route>
+                                    <Route component={NotMatch}></Route>
+                                </Switch>
+                            </Admin>
+                        }></Route>
                         <Route component={NotMatch}></Route>
                     </Switch>
                 </div>
