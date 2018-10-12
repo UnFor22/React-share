@@ -3,7 +3,7 @@ import {HashRouter, Route, Switch} from 'react-router-dom';
 import Home from '../views/Home';
 import NotMatch from '../views/NotMatch';
 import Admin from '../views/Admin';
-import SecondPage from '../views/SecondPage';
+import OrderDemo from '../views/order_demo';
 
 class Router extends Component {
     
@@ -16,7 +16,7 @@ class Router extends Component {
                             <Admin>
                                 <Switch>
                                     <Route path='/admin/home' component={Home}></Route>
-                                    <Route path='/admin/secondPage' component={SecondPage}></Route>
+                                    <Route path='/admin/OrderDemo' component={OrderDemo}></Route>
                                     <Route component={NotMatch}></Route>
                                 </Switch>
                             </Admin>

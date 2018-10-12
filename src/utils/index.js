@@ -1,5 +1,3 @@
-import * as fetch from 'axios'
-
 export function formDate(unix) {
     function fixedZero(num) {
         return num >= 10 ? ('' + num) : ('0' + num)
@@ -19,10 +17,10 @@ export function formDate(unix) {
     return timeStr
 }
 
-const xhr = fetch.create({
-    baseURL: '',
-    timeout:15000
-})
+// const xhr = fetch.create({
+//     baseURL: '',
+//     timeout:15000
+// })
 
 // export const axios = {  
 //     get(url,data,config){
