@@ -23,6 +23,20 @@ class NavLeft extends Component {
                             <Link to='/admin/OrderDemo'>订单管理demo</Link>
                         </MenuItem>
                     </SubMenu>
+                    <SubMenu key="sub2" title={<span><Icon type="mail" /><span>图例</span></span>}>
+                        <MenuItem key='条形图'>
+                            <Link to='/admin/echarts/BarDemo'>条形图</Link>
+                        </MenuItem>
+                        <MenuItem key='条形图demo'>
+                            <Link to='/admin/echarts/BarDemo'>条形图demo</Link>
+                        </MenuItem>
+                        <MenuItem key='饼状图'>
+                            <Link to='/admin/echarts/PieDemo'>饼状图</Link>
+                        </MenuItem>
+                        <MenuItem key='饼状图demo'>
+                            <Link to='/admin/echarts/PieDemo'>形状图demo</Link>
+                        </MenuItem>
+                    </SubMenu>
                     
                 </Menu>
             </div>

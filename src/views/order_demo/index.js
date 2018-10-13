@@ -103,6 +103,15 @@ class OrderDemo extends Component {
             }
         })
     }
+    handleDetail = () => {
+        let item = this.state.selectedItem
+        if(!item){
+            message.info('请选择一项订单')
+        }else{
+            window.open(`/#/common/OrderDetail/${item[0].id}`)            
+        }
+    }
+
     render() {
 
         const { getFieldDecorator } = this.props.form;
@@ -207,7 +216,7 @@ class OrderDemo extends Component {
                 </Card>
                 <Card style={{borderTop:'-1px'}}>
                     <div className='btn-wrap2 clearfix'>
-                        <Button type="primary" className='chaxun fll'>订单详情</Button>
+                        <Button type="primary" className='chaxun fll' onClick={this.handleDetail}>订单详情</Button>
                         <Button type="primary" className='fll' onClick={this.handleDone}>结束订单</Button>
                     </div>
                     
